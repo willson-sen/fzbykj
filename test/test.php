@@ -8,7 +8,7 @@ $client = new Register(
     "SDK",
     // 终端类型。
     "SDK",
-    // 地震消息类型，[EEW：地震预警]、[][][EQR：地震速报]。
+    // 地震消息类型，[EEW：地震预警]、[EQR：地震速报]。
     "EEW,EQR",
     // 回调方式类型；[http:回调地址方式]、[redis:redis方式]、[mysql:mysql方式]、[file:文件方式]，默认为4。
     1,
