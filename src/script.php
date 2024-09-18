@@ -29,7 +29,7 @@ $worker->onWorkerStart = function (){
         'client_id' => $account_info["clientId"],
         'qos'=>1,
         "ssl"=>1,
-        "debug"=>1
+//        "debug"=>1
     ];
     //连接mqtt主题
     $mqtt = new Workerman\Mqtt\Client('mqtts://' . $mqtt_ip . ':'.$port, $p);
@@ -39,9 +39,9 @@ $worker->onWorkerStart = function (){
     };
     //收到主题推送的消息
     $mqtt->onMessage = function ($topic, $content) use ($account_info,$redis){
-        error_log(date("Y-m-d H:i:s",time()).PHP_EOL."收到主题推送的消息".PHP_EOL.var_export($content,true). PHP_EOL, 3, "logs/registerService.log");
         $sdk_config = $redis->get("sdk_config");
         $sdk_config = json_decode($sdk_config,true);
+        error_log(date("Y-m-d H:i:s",time()).PHP_EOL."收到主题推送的消息".PHP_EOL.var_export($content,true). PHP_EOL, 3, $sdk_config["log_url"]);
         if($sdk_config["is_source_feedback"]){
             //反馈内容[演练没有反馈]
         }
@@ -100,14 +100,14 @@ $worker->onWorkerStart = function (){
                         ];
                         $db->insert('fa_mqtt_msg')->cols($insertData)->query();
                     }
-                    error_log(date("Y-m-d H:i:s",time()).PHP_EOL."存入数据库成功".PHP_EOL.var_export($insertData,true). PHP_EOL, 3, "logs/registerService.log");
+                    error_log(date("Y-m-d H:i:s",time()).PHP_EOL."存入数据库成功".PHP_EOL.var_export($insertData,true). PHP_EOL, 3, $sdk_config["log_url"]);
                 } catch(PDOException $e) {
                     echo "Error: " . $e->getMessage();
                 }
                 break;
                 //文件存储方式
             case 4:
-                $file_path = "sdk_callback/".date("YmdHis")."_".$account_info["clientId"].".json";
+                $file_path = __DIR__."/sdk_callback/".date("YmdHis")."_".$account_info["clientId"].".json";
                 file_put_contents($file_path,date("Y-m-d H:i:s",time()).PHP_EOL."存入数据库成功".PHP_EOL.var_export(json_decode($content,true),true). PHP_EOL);
                 break;
         }
