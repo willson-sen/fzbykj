@@ -15,7 +15,7 @@ class Register
         $this->owner = $owner;
         $this->type = $type;
         $this->scope = $scope;
-        $this->log_url = empty($log_url) ? "logs/registerService.log" : $log_url;
+        $this->log_url = $log_url;
         $this->redis = new \Redis();
         try {
             $this->redis->connect(REDIS_HOST, REDIS_PORT);
