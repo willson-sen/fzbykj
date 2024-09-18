@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/sdk/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/sdk/vendor/workerman/redis" />
+      <path value="$PROJECT_DIR$/sdk/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/sdk/vendor/workerman/redis-queue" />
+      <path value="$PROJECT_DIR$/sdk/vendor/workerman/workerman" />
+      <path value="$PROJECT_DIR$/sdk/vendor/php-mqtt/client" />
+      <path value="$PROJECT_DIR$/sdk/vendor/workerman/mqtt" />
+      <path value="$PROJECT_DIR$/sdk/vendor/workerman/mysql" />
+      <path value="$PROJECT_DIR$/sdk/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/workerman/mysql" />
+      <path value="$PROJECT_DIR$/vendor/workerman/redis" />
+      <path value="$PROJECT_DIR$/vendor/workerman/redis-queue" />
+      <path value="$PROJECT_DIR$/vendor/workerman/workerman" />
+      <path value="$PROJECT_DIR$/vendor/php-mqtt/client" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/workerman/mqtt" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/sdk/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

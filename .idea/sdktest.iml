@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/myclabs/php-enum" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/php-mqtt/client" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/workerman/mqtt" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/workerman/mysql" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/workerman/redis" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/workerman/redis-queue" />
+      <excludeFolder url="file://$MODULE_DIR$/sdk/vendor/workerman/workerman" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/php-enum" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-mqtt/client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/mqtt" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/mysql" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/redis" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/redis-queue" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/workerman/workerman" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

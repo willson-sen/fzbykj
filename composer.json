@@ -1,0 +1,38 @@
+{
+  "name": "fzbykj/quake-sdk",
+  "description": "基于地震信息发布系统SDK",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "wilson",
+      "email": "414258157@qq.com"
+    }
+  ],
+  "require": {
+    "workerman/redis-queue": "^1.1",
+    "workerman/mysql": "^1.0",
+    "workerman/mqtt": "^1.5",
+    "php-mqtt/client": "^1.8",
+    "ext-json": "*",
+    "ext-redis": "*",
+    "ext-curl": "*",
+    "ext-mbstring": "*",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "files": [
+      "src/Register.php",
+      "src/config.php"
+    ]
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://mirrors.aliyun.com/composer/"
+    },
+    "0": {
+      "type": "composer",
+      "url": "https://mirrors.cloud.tencent.com/composer/"
+    }
+  }
+}

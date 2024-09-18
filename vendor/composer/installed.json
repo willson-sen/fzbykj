@@ -1,0 +1,329 @@
+{
+    "packages": [
+        {
+            "name": "myclabs/php-enum",
+            "version": "1.8.4",
+            "version_normalized": "1.8.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/myclabs/php-enum/1.8.4/myclabs-php-enum-1.8.4.zip",
+                "reference": "a867478eae49c9f59ece437ae7f9506bfaa27483",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "1.*",
+                "vimeo/psalm": "^4.6.2"
+            },
+            "time": "2022-08-04T09:53:51+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "MyCLabs\\Enum\\": "src/"
+                },
+                "classmap": [
+                    "stubs/Stringable.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP Enum contributors",
+                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
+                }
+            ],
+            "description": "PHP Enum implementation",
+            "homepage": "http://github.com/myclabs/php-enum",
+            "keywords": [
+                "enum"
+            ],
+            "install-path": "../myclabs/php-enum"
+        },
+        {
+            "name": "php-mqtt/client",
+            "version": "v1.8.1",
+            "version_normalized": "1.8.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/php-mqtt/client/v1.8.1/php-mqtt-client-v1.8.1.zip",
+                "reference": "92e348db89c8362947e2efb8df9ba819cea428f2",
+                "shasum": ""
+            },
+            "require": {
+                "myclabs/php-enum": "^1.7",
+                "php": "^7.4|^8.0",
+                "psr/log": "^1.1|^2.0|^3.0"
+            },
+            "require-dev": {
+                "phpunit/php-invoker": "^3.0",
+                "phpunit/phpunit": "^9.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "suggest": {
+                "ext-redis": "Required for the RedisRepository"
+            },
+            "time": "2023-08-10T16:18:24+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "PhpMqtt\\Client\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marvin Mall",
+                    "email": "marvin-mall@msn.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "An MQTT client written in and for PHP.",
+            "keywords": [
+                "client",
+                "mqtt",
+                "publish",
+                "subscribe"
+            ],
+            "install-path": "../php-mqtt/client"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "version_normalized": "1.1.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/psr/log/1.1.4/psr-log-1.1.4.zip",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "2021-05-03T11:20:27+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "install-path": "../psr/log"
+        },
+        {
+            "name": "workerman/mqtt",
+            "version": "v1.6",
+            "version_normalized": "1.6.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/workerman/mqtt/v1.6/workerman-mqtt-v1.6.zip",
+                "reference": "01258d4b514756a37bf05aebb8accaedc3e228a3",
+                "shasum": ""
+            },
+            "require": {
+                "workerman/workerman": ">=3.3.0"
+            },
+            "suggest": {
+                "ext-event": "For better performance. "
+            },
+            "time": "2024-06-04T14:22:48+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\Mqtt\\": "./src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "walkor",
+                    "email": "walkor@workerman.net",
+                    "homepage": "https://www.workerman.net",
+                    "role": "Developer"
+                }
+            ],
+            "homepage": "https://www.workerman.net",
+            "keywords": [
+                "event-loop",
+                "mqtt",
+                "mqtt3",
+                "mqtt5.0",
+                "mqtt_client",
+                "php",
+                "workerman"
+            ],
+            "install-path": "../workerman/mqtt"
+        },
+        {
+            "name": "workerman/mysql",
+            "version": "v1.0.8",
+            "version_normalized": "1.0.8.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/workerman/mysql/v1.0.8/workerman-mysql-v1.0.8.zip",
+                "reference": "5929dcb03693073dca2fc3cde3cc93382b55c366",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "ext-pdo_mysql": "*",
+                "php": ">=5.3"
+            },
+            "time": "2024-03-06T06:14:35+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\MySQL\\": "./src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Long-living MySQL connection for daemon.",
+            "homepage": "http://www.workerman.net",
+            "keywords": [
+                "mysql",
+                "pdo",
+                "pdo_mysql"
+            ],
+            "install-path": "../workerman/mysql"
+        },
+        {
+            "name": "workerman/redis",
+            "version": "v2.0.3",
+            "version_normalized": "2.0.3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/workerman/redis/v2.0.3/workerman-redis-v2.0.3.zip",
+                "reference": "4e910d4b0c2f2101a1f8dbd28be79fd864f7aab8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7",
+                "workerman/workerman": "^4.1.0||^5.0.0"
+            },
+            "time": "2024-08-01T03:38:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\Redis\\": "./src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "http://www.workerman.net",
+            "install-path": "../workerman/redis"
+        },
+        {
+            "name": "workerman/redis-queue",
+            "version": "v1.2.0",
+            "version_normalized": "1.2.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/workerman/redis-queue/v1.2.0/workerman-redis-queue-v1.2.0.zip",
+                "reference": "7b6aee70d69e5c9427c0411d85f8398027831b42",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "workerman/redis": "^1.0||^2.0",
+                "workerman/workerman": ">=4.0.20"
+            },
+            "time": "2024-02-28T07:00:03+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\RedisQueue\\": "./src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Message queue system written in PHP based on workerman and backed by Redis.",
+            "homepage": "http://www.workerman.net",
+            "install-path": "../workerman/redis-queue"
+        },
+        {
+            "name": "workerman/workerman",
+            "version": "4.1.x-dev",
+            "version_normalized": "4.1.9999999.9999999-dev",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/workerman/workerman/4.1.x-dev/workerman-workerman-4.1.x-dev.zip",
+                "reference": "f6f032c2cb6a8e10e07074eac1d4fbb891790dfa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "suggest": {
+                "ext-event": "For better performance. "
+            },
+            "time": "2024-09-09T12:24:28+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\": "./"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "walkor",
+                    "email": "walkor@workerman.net",
+                    "homepage": "http://www.workerman.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An asynchronous event driven PHP framework for easily building fast, scalable network applications.",
+            "homepage": "http://www.workerman.net",
+            "keywords": [
+                "asynchronous",
+                "event-loop"
+            ],
+            "install-path": "../workerman/workerman"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

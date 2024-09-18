@@ -1,0 +1,33 @@
+2024-09-13 16:21:19 pid:1 RedisException: Redis server went away in D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php:11
+Stack trace:
+#0 D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php(11): Redis->get('scopes_results')
+#1 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(2501): {closure}(Object(Workerman\Worker))
+#2 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(1487): Workerman\Worker->run()
+#3 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(1405): Workerman\Worker::forkWorkersForWindows()
+#4 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#5 D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php(38): Workerman\Worker::runAll()
+#6 {main}
+2024-09-13 17:41:42 pid:1 RedisException: Redis server went away in D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php:11
+Stack trace:
+#0 D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php(11): Redis->get('scopes_results')
+#1 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(2501): {closure}(Object(Workerman\Worker))
+#2 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(1487): Workerman\Worker->run()
+#3 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(1405): Workerman\Worker::forkWorkersForWindows()
+#4 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#5 D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php(38): Workerman\Worker::runAll()
+#6 {main}
+2024-09-13 17:41:58 pid:1 RedisException: Redis server went away in D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php:10
+Stack trace:
+#0 D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php(10): Redis->get('scopes_results')
+#1 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(2501): {closure}(Object(Workerman\Worker))
+#2 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(1487): Workerman\Worker->run()
+#3 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(1405): Workerman\Worker::forkWorkersForWindows()
+#4 D:\phpstudy_pro\WWW\sdktest\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#5 D:\phpstudy_pro\WWW\sdktest\src\jiaoben.php(37): Workerman\Worker::runAll()
+#6 {main}
+2024-09-13 17:50:48 pid:1 Worker process terminated
+2024-09-13 17:51:29 pid:1 Worker process terminated
+2024-09-13 17:51:40 pid:1 Worker process terminated
+2024-09-13 18:02:19 pid:1 Worker process terminated
+2024-09-13 18:02:39 pid:1 Worker process terminated
+2024-09-13 18:06:43 pid:1 Worker process terminated
