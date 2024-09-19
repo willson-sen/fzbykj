@@ -1,13 +1,13 @@
 <?php
 class Register
 {
-    private $license;
-    private $owner;
-    private $type;
-    private $scope;
-    private $log_url;
+    private mixed $license;
+    private mixed $owner;
+    private mixed $type;
+    private mixed $scope;
+    private mixed $log_url;
+    private Redis $redis;
     private $error;
-    private $redis;
 
     public function __construct($license = null,$owner = null,$type = null,$scope = null,$callback_type = 4,$callback_url = null,$is_source_feedback = 1,$log_url = null)
     {
@@ -125,7 +125,11 @@ class Register
             }
             $this->redis->set("scopes_results",json_encode($scopes_results));
             error_log(date("Y-m-d H:i:s",time()).PHP_EOL."scopes_results".PHP_EOL.var_export($scopes_results,true). PHP_EOL, 3, $this->log_url);
-            return $this->startService();
+            if (strtoupper(substr(PHP_OS, 0, 3)) === 'LIN') {
+                return $this->startService();
+            } else {
+                return "你当前处于windows环境中,请手动打开run_script.bat脚本文件";
+            }
         }catch (Exception $e) {
             return  $e->getMessage();
         }
@@ -135,10 +139,10 @@ class Register
      * @return
      * 执行脚本
      */
-    public function startService()
+    public function startService(): string
     {
         $result = $this->runCommandInDirectory(__DIR__, "php script.php start -d");
-        if (strpos($result, 'success') === false && strpos($result, 'success') === false) {
+        if (!str_contains($result, 'success')) {
             return "脚本启动失败: " . $result;
         }
         var_dump($result);
@@ -150,16 +154,17 @@ class Register
      * @return
      * 执行脚本
      */
-    public function stopService()
+    public function stopService(): string
     {
         $result = $this->runCommandInDirectory(__DIR__, "php script.php stop");
-        if (strpos($result, 'success') === false && strpos($result, 'success') === false) {
+        if (!str_contains($result, 'success')) {
             return "脚本暂停失败: " . $result;
         }
         return "暂停成功";
     }
 
-    function runCommandInDirectory($directory, $command) {
+    function runCommandInDirectory($directory, $command): bool|string|null
+    {
         if (!chdir($directory)) {
             return false;
         }
@@ -169,11 +174,12 @@ class Register
     /**
      * HTTP请求
      * @param string $url 请求的URL
-     * @param bool $params 请求的参数内容
-     * @param int $ispost 是否POST请求
+     * @param array $params 请求的参数内容
+     * @param string $method
+     * @param array $header
      * @return bool|string 返回内容
      */
-    protected function byHttpRequest(string $url,array $params, $method = "POST" , $header = [])
+    protected function byHttpRequest(string $url, array $params, string $method = "POST" , array $header = []): bool|string
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);

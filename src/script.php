@@ -28,7 +28,6 @@ $worker->onWorkerStart = function (){
         'password' => $account_info["pwd"],
         'client_id' => $account_info["clientId"],
         'qos'=>1,
-        "ssl"=>1,
 //        "debug"=>1
     ];
     //连接mqtt主题
@@ -60,7 +59,7 @@ $worker->onWorkerStart = function (){
                     $db = new \Workerman\MySQL\Connection(DB_HOST,DB_PORT,DB_USER,DB_PASS,DB_NAME);
                     $content = json_decode($content,true);
                     $insertData = [];
-                    if(strstr($topic,'eewmsg') !== false) {
+                    if(str_contains($topic, 'eewmsg')) {
                         $insertData = [
                             'unique' =>  $content[20],
                             'topic' =>  $topic,
@@ -80,7 +79,7 @@ $worker->onWorkerStart = function (){
                             'createtime' =>  time(),
                         ];
                         $db->insert('fa_mqtt_msg')->cols($insertData)->query();
-                    }elseif (strstr($topic,'eqrmsg') !== false){
+                    }elseif (str_contains($topic, 'eqrmsg')){
                         $insertData = [
                             'unique' =>  $content["19"],
                             'topic' =>  $topic,
@@ -121,12 +120,12 @@ $worker->onWorkerStart = function (){
  * 请求中包含必要的访问配置ID和客户端ID，以识别并获取正确的证书。
  *
  * @param string $url API的URL，用于获取签名证书。
- * @param array $params 请求参数，包括访问配置ID和客户端ID。
- * @return string 返回从API获取的PEM格式证书的JSON响应。
+ * @param array $data
+ * @return array|null 返回从API获取的PEM格式证书的JSON响应。
  */
 function api_post(string $url, array $data): ?array {
     // 数据验证逻辑（示例，根据实际情况调整）
-    if (!is_array($data) || empty($data)) {
+    if (empty($data)) {
         throw new InvalidArgumentException("Data must be a non-empty array.");
     }
     try {

@@ -3,7 +3,7 @@ require_once "../vendor/autoload.php";
 // 创建一个注册对象，用于向服务注册中心注册服务
 $client = new Register(
     //授权码（管理员发放）。
-    "2024091319505974wlRqVb",
+    "20240919113432c38Ou9j7",
     // 所有者，准入过程登记的所属机构。
     "SDK",
     // 终端类型。
