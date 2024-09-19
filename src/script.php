@@ -106,6 +106,10 @@ $worker->onWorkerStart = function (){
                 break;
                 //文件存储方式
             case 4:
+                $dir_path = __DIR__."/sdk_callback/";
+                if (!is_dir($dir_path)) {
+                    mkdir($dir_path, 0777, true);
+                }
                 $file_path = __DIR__."/sdk_callback/".date("YmdHis")."_".$account_info["clientId"].".json";
                 file_put_contents($file_path,date("Y-m-d H:i:s",time()).PHP_EOL."存入数据库成功".PHP_EOL.var_export(json_decode($content,true),true). PHP_EOL);
                 break;
